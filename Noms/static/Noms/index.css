@@ -1,0 +1,65 @@
+/* panel */
+
+.card{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius:25px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 15px;
+    position: relative;
+    transition: flex 0.2s ease-in;
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 1vh;
+    left: 1vw;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active{
+    flex: 3;
+}
+
+.panel.active h3{
+    font-family: "Montserrat";
+    opacity:1;
+}
+
+#noms{
+    background-image: linear-gradient(to bottom,
+    rgba(255, 255, 255, 0.012),
+    rgba(0, 0, 0, 0.75)),url('https://wallpaperbat.com/img/367889-free-download-food-photography-hd-wallpaper-picture-image-food.jpg');
+   }
+
+#bmi{
+    background-image: linear-gradient(to bottom,
+    rgba(255, 255, 255, 0.012),
+    rgba(0, 0, 0, 0.75)),url('https://www.medindia.net/patients/calculators/images/body-mass-index-bmi-chart.jpg');
+}
+
+#burn{
+    background-image: linear-gradient(to bottom,
+    rgba(255, 255, 255, 0.012),
+    rgba(0, 0, 0, 0.75)),url('https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+}
+
+/* for media less than 480px wide */
+
+@media(max-width:480px){
+    .panel:nth-of-type(4) {
+        display:none;
+    }
+}

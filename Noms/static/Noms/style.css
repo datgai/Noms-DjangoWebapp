@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+:root {
+    --background-color: rgb(250, 250, 250);
+    --behind-color: rgb(64, 64, 64);
+    --accent-color: rgb(20, 171, 0);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--behind-color);
+    display:flex;
+    margin:0;
+}
+
+.container {
+    background-color: var(--background-color) ;
+    transform-origin: top left;
+    transition: transform 0.5s ease;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.circle-container {
+    z-index: 2 ;
+    position: fixed;
+    top: -22vh;
+    left: -22vh;
+}
+
+.circle {
+    background-color: var(--accent-color);
+    height: 37vh;
+    width: 37vh;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+.circle button{
+    position: absolute;
+    height: 20vh;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+}
+
+.container.show-nav .circle {
+    transform: rotate(-65deg);
+}
+
+.circle button:focus {
+    outline: none;
+}
+
+.circle button#open {
+    left: 65%;
+    top: 50%;
+}
+
+.circle button#close {
+    left: 55%;
+    top: 70%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+nav {
+    position: fixed;
+    bottom: 1vh;
+    z-index: 100;
+}
+
+nav ul {
+    font-family: "Montserrat";
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    color: white;
+    margin: 3vh 0;
+    transform: translateX(-200%);
+    transition: transform 0.4s ease-in;
+}
+
+nav ul li+li {
+    margin : 3vh;
+}
+
+nav ul li+li+li {
+    margin : 3.5vh;
+    margin-left:4.5vh;
+}
+
+.content{
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-bottom: 4vh;
+    font-size: 25px;
+}
+
+hr{
+    border: 1px solid var(--behind-color);
+    border-radius: 25px;
+}
+
+header{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px;
+}
+
+.footer{
+    display:flex;
+    justify-content: center;
+    margin:0px;
+    padding: 10px;
+    font-size: 15px;
+    background-color: var(--accent-color);
+    color: white;
+}

@@ -1,0 +1,24 @@
+{% extends "Noms/template.html" %}
+
+{% block title %} Noms: Home {% endblock %}
+{% load static %}
+{% block static %} <link rel="stylesheet" href="{% static 'Noms/index.css' %}"> {% endblock %}
+
+{% block body %}
+<h2>Homepage: Welcome to Noms!</h2>
+<div class="card">
+    <div class="panel active" id="noms">
+        <h3>FOOD TRACKER</h3>
+    </div>
+    <div class="panel" id="bmi">
+        <h3>BMI CALCULATOR</h3>
+    </div>
+    <div class="panel" id="burn">
+        <h3>CALORIES CALCULATOR</h3>
+    </div>
+    <div class="panel" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg')">
+        <h3>Mountain</h3>
+    </div>
+</div>
+    <script src="{% static 'Noms/index.js' %}"></script>
+{% endblock %}
