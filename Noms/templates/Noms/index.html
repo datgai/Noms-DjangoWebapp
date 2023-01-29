@@ -8,7 +8,7 @@
 <h2>Homepage: Welcome to Noms!</h2>
 <div class="card">
     <div class="panel active" id="noms">
-        <h3>FOOD TRACKER</h3>
+        <h3><a href="{% url 'nom' %}">FOOD TRACKER</a></h3>
     </div>
     <div class="panel" id="bmi">
         <h3>BMI CALCULATOR</h3>
@@ -17,8 +17,12 @@
         <h3>CALORIES CALCULATOR</h3>
     </div>
     <div class="panel" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg')">
-        <h3>Mountain</h3>
+        <h3>HISTORY</h3>
     </div>
+</div>
+<hr>
+<div class="description"> 
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam natus ipsa quam recusandae culpa officiis, beatae doloribus eius amet perferendis? Commodi, quisquam neque porro sint doloribus officiis tenetur quidem esse pariatur? Error molestias quam alias repudiandae velit aut nulla, fugit laudantium, recusandae ullam rem, voluptatum nesciunt architecto odit quasi eveniet.</p>
 </div>
     <script src="{% static 'Noms/index.js' %}"></script>
 {% endblock %}

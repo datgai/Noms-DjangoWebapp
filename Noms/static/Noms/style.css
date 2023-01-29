@@ -73,7 +73,6 @@ body{
 
 .container.show-nav + nav li {
     transform: translateX(0);
-    transition-delay: 0.3s;
 }
 
 nav {
@@ -83,6 +82,7 @@ nav {
 }
 
 nav ul {
+    text-decoration: none;
     font-family: "Montserrat";
     list-style-type: none;
     padding-left: 15px;
@@ -104,6 +104,17 @@ nav ul li+li+li {
     margin : 3.5vh;
     margin-left:4.5vh;
 }
+
+nav a{
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 400;
+    color:white;
+    background-color: transparent ;
+    border: none;
+}
+
 
 .content{
     margin-left: 4vw;
@@ -130,6 +141,7 @@ header{
     margin:0px;
     padding: 10px;
     font-size: 15px;
+    font-family: "Montserrat";
     background-color: var(--accent-color);
     color: white;
 }
