@@ -13,7 +13,7 @@ def index(request):
 def nom(request):
     if request.method == 'POST':
         foodform = NomForm(request.POST)
-        if form.is_valid():
+        if foodform.is_valid():
             return render(request, "Noms/index.html")
     else:
         foodform = NomForm

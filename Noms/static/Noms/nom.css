@@ -1,0 +1,17 @@
+.inputform{
+    padding:4px;
+    width: 300px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid gray;
+    box-shadow: 5px;
+    font-size: large;
+}
+
+.inputform:focus{
+    text-decoration: none;
+    outline:none;
+    border-bottom: 5px solid green;
+    padding-left: 15px;
+    transition: all 0.3s ease;
+}

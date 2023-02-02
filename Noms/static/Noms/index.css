@@ -19,7 +19,7 @@ h2{
     border-radius:25px;
     color: white;
     cursor: pointer;
-    flex: 0.5;
+    flex: 1;
     margin: 15px;
     position: relative;
     transition: flex 0.2s ease-in;
