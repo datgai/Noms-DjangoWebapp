@@ -61,13 +61,13 @@ body{
 }
 
 .circle button#open {
-    left: 55%;
+    left: 70%;
     top: 50%;
 }
 
 .circle button#close {
-    left: 57%;
-    top: 60%;
+    left: 55%;
+    top: 75%;
     transform: rotate(90deg);
     transform-origin: top left;
 }

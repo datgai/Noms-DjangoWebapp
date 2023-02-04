@@ -1,0 +1,41 @@
+.LoginBox{
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.LoginBox button{
+    margin-left:10px;
+    padding:10px;
+    width: 100px;
+    background-color: var(--accent-color);
+    border: none;
+    color: white;
+    border-radius: 25px;
+    font-family: "Montserrat";
+}
+
+.LoginBox button:hover{
+    background-color: green;
+    cursor:pointer;
+}
+
+.LoginContainer{
+    flex:2;
+    padding:3%;
+}
+
+.RegisterContainer{
+    padding:3%;
+    background-color: var(--accent-color);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#RegisterButton{
+    background-color: white;
+    color: var(--accent-color);
+}

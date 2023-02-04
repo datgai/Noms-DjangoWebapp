@@ -2,7 +2,6 @@ from django.shortcuts import render, get_object_or_404
 
 from .forms import NomForm
 
-
 from .models import Food_model
 
 # Create your views here.

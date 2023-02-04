@@ -7,17 +7,12 @@
 {% block body %}
 <div class="LoginBox">
     <div class="LoginContainer">
-        <h2> Login to Your Account! </h2>
+        <h2> Welcome! </h2>
     <form action="nom" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">LOG IN</button>
+        <button type="submit"> REGISTER </button>
     </form>
-    </div>
-    <div class="RegisterContainer">
-        <h2>New here?</h2>
-        <p> What are you waiting for? It's Free! </p>
-        <button id="RegisterButton" onclick="location.href = '/register'" >REGISTER</button>
     </div>
 </div>
 {% endblock %}
