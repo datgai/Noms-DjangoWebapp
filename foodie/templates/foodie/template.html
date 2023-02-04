@@ -7,10 +7,10 @@
     <title> {% block title %}  {% endblock %} </title>
     {% load static %}
     {% block static %} {% endblock %}
-    <link rel="stylesheet" href="{% static 'Noms/style.css' %}">
-    <link rel="stylesheet" href="{% static 'Noms/index.css' %}">
+    <link rel="stylesheet" href="{% static 'foodie/style.css' %}">
+    <link rel="stylesheet" href="{% static 'foodie/index.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="{% static 'Noms/Noms.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'foodie/logo.ico' %}" type="image/x-icon">
 </head>
 <body>
     <div class="container">
@@ -26,7 +26,7 @@
         </div>
         <div class="content">
             <header>
-                <img src="{% static 'Noms/Noms.png' %}" height="100px">
+                <img src="{% static 'foodie/logo.png' %}" height="100px">
             </header>
             <hr>
         {% block body %} {% endblock %}
@@ -38,12 +38,12 @@
     </div>
     <nav>
         <ul>
-            <li><a href="{% url 'noms:index' %}"><i class="fas fa-home"></i> HOME </a></li>
-            <li><i class="fas fa-user-alt"></i> ABOUT</li>
+            <li><a href="{% url 'index' %}"><i class="fas fa-home"></i> HOME </a></li>
+            <li><i class="fas fa-user-alt"></i> PROFILE</li>
             <li><i class="fas fa-envelope"></i> CONTACT</li>
         </ul>
     </nav>
     
-    <script src="{% static 'Noms/script.js' %}"></script>
+    <script src="{% static 'foodie/script.js' %}"></script>
 </body>
 </html>

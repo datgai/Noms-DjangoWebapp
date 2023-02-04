@@ -8,7 +8,7 @@ class NomForm(forms.ModelForm):
         fields = ('food_name','food_date','food_calories','food_protein','food_fat','food_saturatedfat','food_sodium','food_potassium','food_carb','food_fiber')
 
         widgets = {'food_name' : forms.TextInput(attrs={'class' : 'inputform'}),
-        'food_date' : forms.DateInput(attrs={'class' : 'inputform','value': datetime.datetime.now().strftime("%d-%m-%Y")}),
+        'food_date' : forms.DateInput(attrs={'class' : 'inputform','value': datetime.datetime.now().strftime("%Y-%m-%d")}),
         'food_time' : forms.TimeInput(attrs={'class' : 'inputform'}),
         'food_calories' : forms.NumberInput(attrs={'class' : 'inputform'}),
         'food_protein' : forms.NumberInput(attrs={'class' : 'inputform'}),

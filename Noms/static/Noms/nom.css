@@ -5,13 +5,30 @@
     border: none;
     border-bottom: 2px solid gray;
     box-shadow: 5px;
-    font-size: large;
+    font-size: 20px;
+    font-family:"Montserrat";
 }
 
 .inputform:focus{
     text-decoration: none;
     outline:none;
-    border-bottom: 5px solid green;
+    border-bottom: 5px solid var(--accent-color);
     padding-left: 15px;
     transition: all 0.3s ease;
+}
+
+button{
+    margin-left:10px;
+    padding:10px;
+    width: 100px;
+    background-color: var(--accent-color);
+    border: none;
+    color: white;
+    border-radius: 25px;
+    font-family: "Montserrat";
+}
+
+button:hover{
+    background-color: green;
+    cursor:pointer;
 }

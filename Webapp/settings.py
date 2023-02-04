@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'Noms.apps.NomsConfig',
+    'foodie.apps.FoodieConfig',
 ]
 
 MIDDLEWARE = [

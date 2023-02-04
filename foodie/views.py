@@ -2,4 +2,4 @@ from django.shortcuts import render,HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("This is index of foodie")
+    return render(request, "foodie/index.html")

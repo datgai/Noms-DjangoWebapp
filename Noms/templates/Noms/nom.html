@@ -1,4 +1,4 @@
-{% extends "Noms/template.html" %}
+{% extends "foodie/template.html" %}
 
 {% block title %} Noms: Home {% endblock %}
 {% load static %}
@@ -6,9 +6,9 @@
 
 {% block body %}
 <h2>Food Tracker: Nom Nom Nom!</h2>
-<form action="/submit-nom/" method="post">
+<form action="nom" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Submit">
+    <button type="submit">SUBMIT</button>
 </form>
 {% endblock %}
