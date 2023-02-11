@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1">
-    <title> {% block title %}  {% endblock %} </title>
+    <title> {% block title %} {% endblock %} </title>
     {% load static %}
     {% block static %} {% endblock %}
     <link rel="stylesheet" href="{% static 'foodie/style.css' %}">
     <link rel="stylesheet" href="{% static 'foodie/index.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="{% static 'foodie/logo.ico' %}" type="image/x-icon">
 </head>
+
 <body>
     <div class="container">
         <div class="circle-container">
@@ -29,21 +33,26 @@
                 <img src="{% static 'foodie/logo.png' %}" height="100px">
             </header>
             <hr>
-        {% block body %} {% endblock %}
-        {% load static %}
+            {% block body %} {% endblock %}
+            {% load static %}
         </div>
         <div class="footer">
             <p> Website for education purposes - I Have No Idea What I'm doing™ </p>
-       </div>
+        </div>
     </div>
     <nav>
         <ul>
             <li><a href="{% url 'index' %}"><i class="fas fa-home"></i> HOME </a></li>
+            {% if request.user.is_authenticated %}
+            <li><a href="{% url 'logout' %}"><i class="fas fa-user-alt"></i> LOG OUT </a></li>
+            {% else %}
             <li><a href="{% url 'login' %}"><i class="fas fa-user-alt"></i> LOG IN </a></li>
+            {% endif %}
             <li><i class="fas fa-envelope"></i> CONTACT</li>
         </ul>
     </nav>
-    
+
     <script src="{% static 'foodie/script.js' %}"></script>
 </body>
+
 </html>
