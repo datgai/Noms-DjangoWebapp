@@ -65,6 +65,12 @@ h2{
     rgba(0, 0, 0, 0.75)),url('https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
 }
 
+#history{
+    background-image: linear-gradient(to bottom,
+    rgba(255, 255, 255, 0.012),
+    rgba(0, 0, 0, 0.75)),url('https://www.helpguide.org/wp-content/uploads/calories-counting-diet-food-control-and-weight-loss-concept-calorie.jpg');
+}
+
 /* for media less than 480px wide */
 
 @media(max-width:480px){

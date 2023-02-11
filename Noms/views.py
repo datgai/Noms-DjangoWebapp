@@ -5,9 +5,10 @@ from .forms import NomForm
 from .models import Food_model
 
 # Create your views here.
+
 def history(request):
-    #context = {""}
-    return render(request, "Noms/history.html")
+    food_list = Food_model.objects.filter(food_eater = request.user.id)
+    return render(request, "Noms/history.html",{'food_list':food_list})
 
 def nom(request):
     if request.method == 'POST':

@@ -1,5 +1,44 @@
 {% extends "foodie/template.html" %}
 
-{% block title %} {{food.food_text}} {% endblock %}
+{% block title %} Noms: History {% endblock %}
 
-{{ food }}
+{% block body %}
+<h2>History</h2>
+{% if food_list %}
+<table>
+    <tr>
+        <th>Dish</th>
+        <th>Time</th>
+        <th>Date</th>
+        <th>Calories</th>
+        <th>Protein</th>
+        <th>Fat</th>
+        <th>Saturated Fat</th>
+        <th>Sodium</th>
+        <th>Potassium</th>
+        <th>Carbohydrates</th>
+        <th>Fiber</th>
+    </tr>
+    {% for food in food_list %}
+    <tr>
+        <td>{{ food.food_name }}</td>
+        <td>{{ food.food_time }}</td>
+        <td>{{ food.food_date }}</td>
+        <td>{{ food.food_calories }} cal</td>
+        <td>{{ food.food_protein }}</td>
+        <td>{{ food.food_fat }}</td>
+        <td>{{ food.food_saturatedfat }}</td>
+        <td>{{ food.food_sodium }}</td>
+        <td>{{ food.food_potassium }}</td>
+        <td>{{ food.food_carb }}</td>
+        <td>{{ food.food_fiber }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>Oops! There are no records yet, try adding one!</p>
+{% endif %}
+
+
+
+{% endblock %}
