@@ -2,7 +2,6 @@ h2{
     font-family:"Montserrat"
 }
 
-
 /* panel */
 
 .card{
@@ -32,6 +31,11 @@ h2{
     left: 1vw;
     margin: 0;
     opacity: 0;
+}
+
+.panel h3 a{
+    text-decoration: none;
+    color:white;
 }
 
 .panel.active{

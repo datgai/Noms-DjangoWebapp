@@ -2,17 +2,66 @@
 
 {% block title %} foodie: Login {% endblock %}
 {% load static %}
- {% block static %} <link rel="stylesheet" href="{% static 'foodie/login.css' %}"> {% endblock %}
+{% block static %}
+<link rel="stylesheet" href="{% static 'foodie/login.css' %}"> {% endblock %}
 
 {% block body %}
 <div class="LoginBox">
     <div class="LoginContainer">
-        <h2> Welcome! </h2>
-    <form action="nom" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit"> REGISTER </button>
-    </form>
+        <h2> WELCOME! </h2>
+        <form method="post">
+            {% csrf_token %}
+            {% if True %}
+            <div class="RegisterAlert">
+                <div id="form_errors">
+                    {% for key, value in form.errors.items %}
+                    <strong>{{ value }}</strong>
+                    {% endfor %}
+                </div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endif %}
+            <div class="FormBox">
+                <div class="FormInput" id="First_Name">
+                    <label>First Name:</label>
+                    {{form.first_name}}
+                </div>
+                <div class="FormInput" id="Last_Name">
+                    <label>Last Name:</label>
+                    {{form.last_name}}
+                </div>
+                <div class="FormInput" id="Username">
+                    <label>Username:</label>
+                    {{form.username}}
+                </div>
+                <div class="FormInput" id="Email">
+                    <label>Email:</label>
+                    {{form.email}}
+                </div>
+                <div class="FormInput" id="Password1">
+                    <label>Password:</label>
+                    {{form.password1}}
+                </div>
+                <div class="FormInput" id="Password2">
+                    <label>Confirmation Password:</label>
+                    {{form.password2}}
+                </div>
+            </div>
+            <button type="submit"> REGISTER </button>
+        </form>
     </div>
 </div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+<!-- A plugin for password show/hide  -->
+<script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
 {% endblock %}

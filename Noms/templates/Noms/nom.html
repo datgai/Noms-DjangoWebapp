@@ -2,11 +2,12 @@
 
 {% block title %} Noms: Home {% endblock %}
 {% load static %}
-{% block static %} <link rel="stylesheet" href="{% static 'Noms/nom.css' %}"> {% endblock %}
+{% block static %}
+<link rel="stylesheet" href="{% static 'Noms/nom.css' %}"> {% endblock %}
 
 {% block body %}
 <h2>Food Tracker: Nom Nom Nom!</h2>
-<form action="nom" method="post">
+<form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">SUBMIT</button>

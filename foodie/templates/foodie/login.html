@@ -1,23 +1,62 @@
-{% extends "foodie/template.html" %}
-
-{% block title %} foodie: Login {% endblock %}
+{% extends "foodie/template.html" %} {% block title %} foodie: Login
+{% endblock %}
 {% load static %}
- {% block static %} <link rel="stylesheet" href="{% static 'foodie/login.css' %}"> {% endblock %}
+{% block static %}
+<link rel="stylesheet" href="{% static 'foodie/login.css' %}" />
+{% endblock %}
 
 {% block body %}
 <div class="LoginBox">
     <div class="LoginContainer">
-        <h2> Login to Your Account! </h2>
-    <form action="nom" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">LOG IN</button>
-    </form>
+        <h2>LOGIN TO YOUR ACCOUNT!</h2>
+        <form method="post">
+            {% csrf_token %}
+            {% if True %}
+            <div class="RegisterAlert">
+                <div id="form_errors">
+                    {% for key, value in form.errors.items %}
+                    <strong>{{ value }}</strong>
+                    {% endfor %}
+                </div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endif %}
+            <div class="FormBox">
+                <div class="FormInput" id="Username">
+                    <label>Username:</label>
+                    {{form.username}}
+                </div>
+                <div class="FormInput" id="Password">
+                    <label>Password:</label>
+                    {{form.password}}
+                </div>
+                <div class="FormInput" id="RememberMe" style="width : 100%">
+                    <label>Remember Me:</label>
+                    {{form.remember_me}}
+                </div>
+                <button type="submit">LOG IN</button>
+            </div>
+        </form>
     </div>
     <div class="RegisterContainer">
-        <h2>New here?</h2>
-        <p> What are you waiting for? It's Free! </p>
-        <button id="RegisterButton" onclick="location.href = '/register'" >REGISTER</button>
+        <h2>NEW HERE?</h2>
+        <p>What are you waiting for? It's Free!</p>
+        <button id="RegisterButton" onclick="location.href = '/register'">
+            REGISTER
+        </button>
     </div>
 </div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+<!-- A plugin for password show/hide  -->
+<script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
 {% endblock %}

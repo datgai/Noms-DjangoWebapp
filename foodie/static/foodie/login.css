@@ -23,8 +23,13 @@
     cursor:pointer;
 }
 
+.LoginBox h2{
+    font-family: "Montserrat";
+    font-weight: bolder;
+}
+
 .LoginContainer{
-    flex:2;
+    width:80%;
     padding:3%;
 }
 
@@ -38,4 +43,82 @@
 #RegisterButton{
     background-color: white;
     color: var(--accent-color);
+}
+
+.LoginInput{
+    border-radius: 25px;
+    padding:8px;
+    width: 30%;
+    border: 2px solid var(--accent-color);
+}
+
+.LoginInput:focus{
+    text-decoration: none;
+    outline:none;
+    border: 3px solid green;
+}
+
+
+.RegisterAlert{
+    margin:10px;
+    padding:8px;
+    background-color: pink;
+    color:red;
+    font-family: 'Montserrat';
+    font-size: small;
+}
+
+.RegisterAlert button{
+    background-color: transparent;
+    padding:5px;
+    width: 15px;
+    scale: 200%;
+}
+
+.RegisterAlert button:hover{
+    background-color: transparent;
+}
+
+.FormBox{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin:10px;
+}
+
+.FormInput{
+    width:45%;
+    margin:10px;
+}
+
+.FormInput label{
+    font-family: 'Montserrat';
+}
+
+.FormInput input{
+    width:80%;
+}
+
+.FormInput button{
+    width:auto;
+}
+
+#id_remember_me{
+    width:auto;
+}
+
+.input-group{
+    display:flex;
+    flex-wrap: nowrap;
+}
+
+.input-group input{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group-append button{
+    margin:0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
