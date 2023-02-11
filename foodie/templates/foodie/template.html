@@ -44,7 +44,7 @@
         <ul>
             <li><a href="{% url 'index' %}"><i class="fas fa-home"></i> HOME </a></li>
             {% if request.user.is_authenticated %}
-            <li><a href="{% url 'logout' %}"><i class="fas fa-user-alt"></i> LOG OUT </a></li>
+            <li><a href="{% url 'logout' %}"><i class="fas fa-user-alt"></i> {{ request.user.username }} </a></li>
             {% else %}
             <li><a href="{% url 'login' %}"><i class="fas fa-user-alt"></i> LOG IN </a></li>
             {% endif %}
