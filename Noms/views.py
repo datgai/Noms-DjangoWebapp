@@ -1,15 +1,17 @@
 from django.shortcuts import render, get_object_or_404,redirect
+from django.contrib.auth.decorators import login_required
 
 from .forms import NomForm
 
 from .models import Food_model
 
 # Create your views here.
-
+@login_required
 def history(request):
     food_list = Food_model.objects.filter(food_eater = request.user.id)
     return render(request, "Noms/history.html",{'food_list':food_list})
 
+@login_required
 def nom(request):
     if request.method == 'POST':
         foodform = NomForm(request.POST)

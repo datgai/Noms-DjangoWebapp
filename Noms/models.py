@@ -7,8 +7,8 @@ import datetime
 # Create your models here.
 class Food_model(models.Model):
     food_name = models.CharField(max_length=100,verbose_name="Meal Name")
-    food_time = models.TimeField('Time of meal:',default=timezone.now())
-    food_date = models.DateField('Date of meal:',default=timezone.now())
+    food_time = models.TimeField('Time of meal:',default=timezone.now)
+    food_date = models.DateField('Date of meal:',default=timezone.now)
     food_calories = models.IntegerField(default=0,help_text="cal",verbose_name='Calories')
     food_protein = models.IntegerField(default=0,help_text="g",verbose_name='Protein')
     food_fat = models.IntegerField(default=0,help_text="g",verbose_name='Total Fat')
