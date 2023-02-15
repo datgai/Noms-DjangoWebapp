@@ -1,0 +1,25 @@
+table{
+    font-size: 80%;
+    font-family: Montserrat;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+th, td {
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+th {
+    color:white;
+    background-color: var(--accent-color);
+}
+
+tr:hover{
+    background-color: darkgray;
+}

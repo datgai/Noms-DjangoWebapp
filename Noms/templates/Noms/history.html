@@ -1,6 +1,10 @@
 {% extends "foodie/template.html" %}
 
 {% block title %} Noms: History {% endblock %}
+{% load static %}
+{% block static %}
+<link rel="stylesheet" href="{% static 'Noms/history.css' %}">
+{% endblock %}
 
 {% block body %}
 <h2>History</h2>
