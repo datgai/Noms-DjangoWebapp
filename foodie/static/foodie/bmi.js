@@ -8,6 +8,6 @@ height.addEventListener('input',CalculateBMI);
 function CalculateBMI(event) {
     let w = document.getElementById('weight').value;
     let h = document.getElementById('height').value;
-    var bmi = w / (h^2)
-    output.innerHTML = bmi.toFixed(1)
+    var bmi = w / (Math.pow(h,2));
+    output.innerHTML = bmi.toFixed(1);
 };
