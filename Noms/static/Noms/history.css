@@ -1,10 +1,10 @@
 table{
+    margin-bottom:40px;
     font-size: 80%;
     font-family: Montserrat;
     width: 100%;
     border-collapse: collapse;
 }
-
 
 th, td {
     border-bottom: 1px solid gray;

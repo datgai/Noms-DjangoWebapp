@@ -1,0 +1,102 @@
+.bmiCard{
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding:20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow:0px 4px 3px rgba(0,0,0,0.4),
+    0px 5px 10px rgba(0,0,0,0.1),
+    0px 10px 20px rgba(0,0,0,0.1);
+}
+
+.bmiCard input{
+    margin: 10px;
+    padding:10px;
+    border-radius: 25px;
+    border: 1px solid black;
+    outline: transparent;
+}
+
+.bmiCard input:focus{
+    border: 2px solid var(--accent-color)
+}
+
+.bmiOutput{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+h5{
+    color: var(--accent-color);
+    font-size: 70px;
+    margin:5px;
+}
+
+.weight{
+    display: flex;
+    flex-direction: column;
+}
+
+.height{
+    display: flex;
+    flex-direction: column;
+}
+
+.bmiInfo{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.bmiAdult{
+    min-width: 300px;
+    width: 45%;
+    margin: 20px;
+    font-size: 90%;
+    font-family: Montserrat;
+    align-items: center;
+    border-collapse:collapse;
+}
+
+.bmiTeen{
+    min-width: 300px;
+    width: 45%;
+    margin: 20px;
+    font-size: 90%;
+    font-family: Montserrat;
+    align-items: center;
+    border-collapse: collapse;
+}
+
+table{
+    width:100%;
+}
+
+th, td {
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+th {
+    color:white;
+    background-color: var(--accent-color);
+}
+
+tr:hover{
+    background-color: darkgray;
+}
+
+p{
+    text-align: justify;
+    text-justify: inter-word;
+}

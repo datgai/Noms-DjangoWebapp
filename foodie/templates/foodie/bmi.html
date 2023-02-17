@@ -1,0 +1,113 @@
+{% extends "foodie/template.html" %} {% block title %} foodie: Logout
+{% endblock %}
+{% load static %}
+{% block static %}
+<link rel="stylesheet" href="{% static 'foodie/bmi.css' %}">
+<script defer src="{% static 'foodie/bmi.js' %}"></script>
+{% endblock %}
+
+
+{% block body %}
+
+<form method="post">
+    {% csrf_token %}
+    <div class="bmiCard">
+        <h2>BMI CALCULATOR</h2>
+        <div class="weight">
+            <label for="weight-input"> Weight</label>
+            <input id="weight" placeholder="Kilograms">
+        </div>
+        <div class="height">
+            <label for="height-input">Height</label>
+            <input id="height" placeholder="Meters">
+        </div>
+        <div class="bmiOutput">
+            <h5 id="bmiValue"> 0.0 </h5> <sub>kg/m <sup>2</sup> </sub>
+        </div>
+    </div>
+
+    <div class="bmiInfo">
+        <div class="bmiAdult">
+            <table>
+                <h4>BMI TABLE FOR ADULTS</h4>
+                <thead>
+                    <th>Category</th>
+                    <th>BMI range - kg/m<sup>2</sup></th>
+                </thead>
+                <tr>
+                    <td>Severe Thinness</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Moderate Thinness</td>
+                    <td>16 - 17</td>
+                </tr>
+                <tr>
+                    <td>Mild Thinness</td>
+                    <td>17 - 18.5</td>
+                </tr>
+
+                <tr>
+                    <td>Normal</td>
+                    <td>18.5 - 25</td>
+                </tr>
+                <tr>
+                    <td>Overweight</td>
+                    <td>25 - 30</td>
+                </tr>
+                <tr>
+                    <td>Obese Class I</td>
+                    <td>30 - 35</td>
+                </tr>
+                <tr>
+                    <td>Obese Class II</td>
+                    <td>35 - 40</td>
+                </tr>
+                <tr>
+                    <td>Obese Class III</td>
+                    <td>&gt; 40</td>
+                </tr>
+            </table>
+            <p id="bmiAdultText">This is the World Health Organization’s (WHO) recommended body weight based on BMI
+                values for adults. It
+                is used for both men and women, age 18 or older. The Body mass chart for adults and the body mass
+                chart
+                for children is different. This is because body mass index is accounted differently based on age and
+                growth spurts.</p>
+        </div>
+
+        <div class="bmiTeen">
+            <table>
+                <h4>BMI TABLE FOR CHILDREN AND TEENS ( AGE 2-20 )</h4>
+                <thead>
+                    <th>Category</th>
+                    <th>Percentile Range</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Underweight</td>
+                        <td>5%</td>
+                    </tr>
+                    <tr>
+                        <td>Healthy weight</td>
+                        <td>5% - 85%</td>
+                    </tr>
+                    <tr>
+                        <td>At risk of overweight</td>
+                        <td>85% - 95%</td>
+                    </tr>
+                    <tr>
+                        <td>Overweight</td>
+                        <td>&gt;95%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p id="bmiTeenText">The BMI categorization for children under 18 is unique. There is a different
+                methodology for minors when it comes to calculate Body Mass Index. This is due to children’s growth
+                and
+                metabolism changes as they get older.</p>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

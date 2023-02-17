@@ -45,3 +45,8 @@ class RegisterView(View):
             return render(request,'foodie/index.html')
 
         return render(request, self.template_name, {'form': form})
+    
+def bmi(request):
+    if request.method == 'POST':
+        pass
+    return render(request,'foodie/bmi.html')
