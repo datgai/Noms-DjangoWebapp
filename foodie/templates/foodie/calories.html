@@ -1,0 +1,78 @@
+{% extends "foodie/template.html" %} {% block title %} foodie: Logout
+{% endblock %}
+{% load static %}
+{% block static %}
+<link rel="stylesheet" href="{% static 'foodie/calories.css' %}">
+<script defer src="{% static 'foodie/calories.js' %}"></script>
+{% endblock %}
+
+
+{% block body %}
+
+<form method="post">
+    {% csrf_token %}
+    <div class="caloriesCard">
+        <h2>CALORIES CALCULATOR</h2>
+        <div class="weight">
+            <label for="weight-input"> Weight</label>
+            <input id="weight" placeholder="Kilograms">
+        </div>
+        <div class="caloriesCardBody">
+            <div class="Card">
+                <div class="activity">
+                    <label for="weight-input"> Activity</label>
+                    <select name="activity" id="activitySelect">
+                        <option value="1.5">🖥️ Desk work</option>
+                        <option value="2.0">🚶 Walking slowly </option>
+                        <option value="3.0">🚶Walking, 3.0 mph (4.8 km/h) </option>
+                        <option value="3.3">🧘 Yoga</option>
+                        <option value="5.0">🎾Tennis</option>
+                        <option value="5.0">🏋️ Weight lift</option>
+                        <option value="5.8">💕 Sex</option>
+                        <option value="6.0">🕺 Dancing</option>
+                        <option value="6.0">🚴 Bicycling (on flat, 16-19 km/h)</option>
+                        <option value="6.0">🦘 Jumping jacks</option>
+                        <option value="8.0">⛹️ Basketball (a game)</option>
+                        <option value="8.8">🏃 Jogging (9.0 km/h)</option>
+                        <option value="9.5">🏊‍♀️ Swimming</option>
+                        <option value="9.8">🪢 Rope jumping (66/min)</option>
+                        <option value="10.3">⚽ Football (a game)</option>
+                        <option value="11.0">🪢 Rope jumping (100/min) </option>
+                        <option value="11.2">🏃 Jogging (10.9 km/h) </option>
+                    </select>
+                </div>
+                <div class="activityTime">
+                    <label for="time-input"> Time</label>
+                    <input id="time-input" placeholder="Hours">
+                </div>
+                <p style="font-size: small; color: white;" id="metValue"> MET : 0.0 </p>
+            </div>
+
+            <div class="Card">
+                <div class="energyHour">
+                    <label for="energyHour-input"> Energy burn per hour</label>
+                    <input id="energyHour-input" placeholder="kcal/hour">
+                </div>
+                <div class="energyTotal">
+                    <label for="energyTotal-input"> Energy burn total</label>
+                    <input id="energyTotal-input" placeholder="kcal">
+                </div>
+
+            </div>
+        </div>
+        <div class="summary">
+            <h5>➡️ To lose 0.5 kg of fat, you should perform this activity for 9.5 hours.</h5>
+            <h5>➡️ To lose 1 kg of fat, you should perform this activity for 19 hours.</h5>
+        </div>
+    </div>
+</form>
+
+<div class="CaloriesInfo">
+
+</div>
+
+<p style="font-size: small;"> Source : <a
+        href="https://www.omnicalculator.com/sports/calories-burned#fun-fact-how-you-lose-weight-when-you-sleep">
+        Omnicalculator </a> & <a href="https://en.wikipedia.org/wiki/Metabolic_equivalent_of_task">
+        Wikipedia </a> </p>
+{% endblock %}

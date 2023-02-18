@@ -50,3 +50,8 @@ def bmi(request):
     if request.method == 'POST':
         pass
     return render(request,'foodie/bmi.html')
+
+def calories(request):
+    if request.method == 'POST':
+        pass
+    return render(request,'foodie/calories.html')

@@ -1,0 +1,89 @@
+.caloriesCard{
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding:20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow:0px 4px 3px rgba(0,0,0,0.4),
+    0px 5px 10px rgba(0,0,0,0.1),
+    0px 10px 20px rgba(0,0,0,0.1);
+}
+
+.caloriesCard input{
+    margin: 10px;
+    margin-top: 15px;
+    padding:10px;
+    border-radius: 25px;
+    border: 1px solid black;
+    outline: transparent;
+}
+
+.caloriesCard input:focus{
+    border: 2px solid var(--accent-color)
+}
+
+.weight{
+    display: flex;
+    flex-direction: column;
+}
+
+.caloriesCardBody
+{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+.caloriesCardBody .Card
+{
+    margin:1vw;
+    margin-top: 15px;
+    padding:1vw;
+    flex:1;
+    background-color: var(--accent-color);
+    border-radius: 25px;
+    box-shadow:0px 4px 3px rgba(0,0,0,0.4);
+}
+
+.Card label
+{
+    background-color: transparent;
+    color:white
+}
+
+.Card input
+{
+    background-color: transparent;
+    color:white;
+    border: 1px solid white;
+}
+
+.Card input:focus{
+    border: 2px solid white;
+}
+
+
+#activitySelect{
+    margin:10px;
+    padding:10px;
+    border-radius: 25px;
+    border: 1px solid white;
+    color: white;
+    outline: transparent;
+    font-family: Montserrat;
+    background-color: var(--accent-color);
+}
+
+h5{
+    color: var(--accent-color);
+    font-size: 20px;
+    margin:5px;
+}
+
+p{
+    text-align: justify;
+    text-justify: inter-word;
+}

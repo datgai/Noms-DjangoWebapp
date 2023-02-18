@@ -11,5 +11,6 @@ urlpatterns = [
                                            authentication_form=LoginForm), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='foodie/logout.html'), name='logout'),
     path("register/", RegisterView.as_view(),name='register'),
-    path('bmi/',views.bmi,name='bmi')
+    path('bmi/',views.bmi,name='bmi'),
+    path('calories/',views.calories,name='calories')
 ]
