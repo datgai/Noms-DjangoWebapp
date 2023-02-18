@@ -43,7 +43,7 @@
                 </div>
                 <div class="activityTime">
                     <label for="time-input"> Time</label>
-                    <input id="time-input" placeholder="Hours">
+                    <input id="time-input" placeholder="Hours" value="1.0">
                 </div>
                 <p style="font-size: small; color: white;" id="metValue"> MET : 0.0 </p>
             </div>
@@ -51,18 +51,18 @@
             <div class="Card">
                 <div class="energyHour">
                     <label for="energyHour-input"> Energy burn per hour</label>
-                    <input id="energyHour-input" placeholder="kcal/hour">
+                    <input id="energyHour-input" placeholder="kcal/hour" value="0">
                 </div>
                 <div class="energyTotal">
                     <label for="energyTotal-input"> Energy burn total</label>
-                    <input id="energyTotal-input" placeholder="kcal">
+                    <input id="energyTotal-input" placeholder="kcal" value="0">
                 </div>
 
             </div>
         </div>
         <div class="summary">
-            <h5>➡️ To lose 0.5 kg of fat, you should perform this activity for 9.5 hours.</h5>
-            <h5>➡️ To lose 1 kg of fat, you should perform this activity for 19 hours.</h5>
+            <h5 id="loseHalfFat">➡️ To lose 0.5 kg of fat, you should perform this activity for 0.0 hours.</h5>
+            <h5 id="loseFullFat">➡️ To lose 1 kg of fat, you should perform this activity for 0.0 hours.</h5>
         </div>
     </div>
 </form>
