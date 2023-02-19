@@ -12,7 +12,7 @@ h2{
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 70vh;
     border-radius:25px;
     color: white;
     cursor: pointer;
@@ -23,7 +23,7 @@ h2{
 }
 
 .panel h3{
-    font-size: 24px;
+    font-size: 100%;
     position: absolute;
     bottom: 1vh;
     left: 1vw;
@@ -73,6 +73,14 @@ h2{
 
 @media(max-width:480px){
     .card{
+        height: 90vh;
         flex-direction: column;
+    }
+    .panel{
+        background-size: 100%;
+        width: 80vw;
+    }
+    .panel.active{
+        background-size: 250%;
     }
 }
