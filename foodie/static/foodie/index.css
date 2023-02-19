@@ -2,8 +2,6 @@ h2{
     font-family:"Montserrat"
 }
 
-/* panel */
-
 .card{
     display: flex;
     align-items:center;
@@ -50,31 +48,31 @@ h2{
 #noms{
     background-image: linear-gradient(to bottom,
     rgba(255, 255, 255, 0.012),
-    rgba(0, 0, 0, 0.75)),url('https://wallpaperbat.com/img/367889-free-download-food-photography-hd-wallpaper-picture-image-food.jpg');
+    rgba(0, 0, 0, 0.75)),url('noms.jpg');
    }
 
 #bmi{
     background-image: linear-gradient(to bottom,
     rgba(255, 255, 255, 0.012),
-    rgba(0, 0, 0, 0.75)),url('https://www.medindia.net/patients/calculators/images/body-mass-index-bmi-chart.jpg');
+    rgba(0, 0, 0, 0.75)),url('bmi.jpg');
 }
 
 #calories{
     background-image: linear-gradient(to bottom,
     rgba(255, 255, 255, 0.012),
-    rgba(0, 0, 0, 0.75)),url('https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    rgba(0, 0, 0, 0.75)),url('calories.jpg');
 }
 
 #history{
     background-image: linear-gradient(to bottom,
     rgba(255, 255, 255, 0.012),
-    rgba(0, 0, 0, 0.75)),url('https://www.helpguide.org/wp-content/uploads/calories-counting-diet-food-control-and-weight-loss-concept-calorie.jpg');
+    rgba(0, 0, 0, 0.75)),url('history.jpg');
 }
 
 /* for media less than 480px wide */
 
 @media(max-width:480px){
-    .panel:nth-of-type(4) {
-        display:none;
+    .card{
+        flex-direction: column;
     }
 }

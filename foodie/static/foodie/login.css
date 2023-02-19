@@ -34,6 +34,7 @@
 }
 
 .RegisterContainer{
+    color:white;
     padding:3%;
     background-color: var(--accent-color);
     border-top-right-radius: 25px;
