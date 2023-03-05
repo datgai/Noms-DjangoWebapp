@@ -1,7 +1,6 @@
 from django.test import TestCase, Client
 from django.urls import reverse
 from django.contrib.auth import models
-import json
 
 class TestViews(TestCase):
     def setUp(self):
